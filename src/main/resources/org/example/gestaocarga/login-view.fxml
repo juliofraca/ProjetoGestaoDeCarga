@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox layoutX="309.0" layoutY="118.0" prefHeight="27.0" prefWidth="223.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="44.0" text="Usuario" />
+                  <TextField fx:id="usuarioDigitado" prefHeight="25.0" prefWidth="173.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="309.0" layoutY="168.0" prefHeight="27.0" prefWidth="223.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="44.0" text="Senha" />
+                  <TextField fx:id="senhaDigitada" prefHeight="25.0" prefWidth="173.0" />
+               </children>
+            </HBox>
+            <Button layoutX="381.0" layoutY="221.0" mnemonicParsing="false" onAction="#bntEntrar" prefHeight="25.0" prefWidth="116.0" text="Entrar" />
+            <Button layoutX="381.0" layoutY="262.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="25.0" prefWidth="116.0" text="Realizar Cadastro" />
+            <StackPane>
+               <children>
+                  <AnchorPane prefHeight="407.0" prefWidth="296.0" />
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

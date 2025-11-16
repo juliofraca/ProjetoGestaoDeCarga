@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.CadastroController">
+   <children>
+      <Label layoutX="269.0" layoutY="37.0" text="Cadastre-se" />
+      <VBox layoutX="233.0" layoutY="73.0" prefHeight="42.0" prefWidth="140.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="44.0" text="Usuario" />
+            <TextField fx:id="usuarioCadastrado" prefHeight="25.0" prefWidth="127.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="232.0" layoutY="127.0" prefHeight="42.0" prefWidth="140.0">
+         <children>
+            <Label text="Digite sua senha " />
+            <TextField fx:id="senhaDigitada" />
+         </children></VBox>
+      <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="25.0" prefWidth="106.0" text="Cadastrar" />
+      <ComboBox fx:id="cbxTipo" layoutX="233.0" layoutY="188.0" prefHeight="25.0" prefWidth="140.0" promptText="Tipo de Usuario" />
+      <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarLogin" text="Voltar" />
+   </children>
+</AnchorPane>
