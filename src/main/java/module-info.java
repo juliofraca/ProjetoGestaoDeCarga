@@ -4,6 +4,7 @@ module org.example.gestaocarga {
     requires java.desktop;
     requires java.sql;
     requires jdk.jdi;
+    requires javafx.graphics;
 
     opens org.example.gestaocarga to javafx.fxml;
     opens org.example.gestaocarga.controller to javafx.fxml;

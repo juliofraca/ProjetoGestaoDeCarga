@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.gestaocarga.controller.CardCargaController"
+            prefWidth="260" prefHeight="160"
+            style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+
+    <children>
+        <VBox spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10">
+
+            <!-- ORIGEM -->
+            <Label text="Origem:" style="-fx-font-weight: bold;" />
+            <Label fx:id="lblOrigem" style="-fx-font-size: 14;" />
+
+            <!-- DESTINO -->
+            <Label text="Destino:" style="-fx-font-weight: bold;" />
+            <Label fx:id="lblDestino" style="-fx-font-size: 14;" />
+
+            <!-- DATA ENTREGA -->
+            <Label text="Data de Entrega:" style="-fx-font-weight: bold;" />
+            <Label fx:id="lblData" style="-fx-font-size: 14;" />
+
+            <!-- BOTÃO ACEITAR -->
+            <Button fx:id="btnAceitar"
+                    text="Aceitar"
+                    onAction="#aceitarCarga"
+                    style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 5; -fx-padding: 5 10;" />
+
+        </VBox>
+    </children>
+</AnchorPane>
