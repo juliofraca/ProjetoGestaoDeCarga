@@ -13,8 +13,6 @@ import org.example.gestaocarga.controller.modelos.Usuario;
 
 import java.io.IOException;
 
-
-
 public class LoginController {
 
     @FXML
@@ -27,7 +25,7 @@ public class LoginController {
     protected void cadastrarUsuario(ActionEvent event) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/cadastro-view.fxml"));
-         Scene cadastroScene = new Scene(fxmlLoader.load());
+        Scene cadastroScene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(cadastroScene);
@@ -36,7 +34,6 @@ public class LoginController {
     }
 
     public void bntEntrar(ActionEvent actionEvent) throws IOException {
-
 
         String nome = usuarioDigitado.getText();
         String senha = senhaDigitada.getText();
@@ -52,18 +49,25 @@ public class LoginController {
         String telaDestino;
 
         if (usuario.getTipo().equals("Gestor")) {
-            telaDestino = "/org/example/gestaocarga/gestor-view.fxml";
-        } else {
-            telaDestino = "/org/example/gestaocarga/camionheiro-view.fxml";
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/gestor-view.fxml"));
+            Scene novaCena = new Scene(loader.load());
+
+            GestorController controller = loader.getController();
+            controller.setUsuario(usuario); // <-- AQUI É O QUE FALTAVA
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(novaCena);
+            stage.show();
+            return;
         }
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(telaDestino));
-        Scene novaCena = new Scene(fxmlLoader.load());
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/camionheiro-view.fxml"));
+        Scene novaCena = new Scene(loader.load());
 
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(novaCena);
         stage.show();
     }
-
-    }
-
+}

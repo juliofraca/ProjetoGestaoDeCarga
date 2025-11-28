@@ -3,31 +3,63 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.GestorController">
-   <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <AnchorPane prefHeight="52.0" prefWidth="600.0">
-               <children>
-                  <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Sair" />
-                  <Button layoutX="411.0" layoutY="14.0" mnemonicParsing="false" text="Vizualizar Historico" />
-                  <Button layoutX="285.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Adicionar Carga" />
-               </children>
-            </AnchorPane>
-            <FlowPane layoutX="21.0" layoutY="58.0" prefHeight="321.0" prefWidth="558.0">
-               <children>
-                  <VBox fx:id="cardCarga" prefHeight="151.0" prefWidth="173.0">
-                     <children>
-                        <Label prefHeight="25.0" prefWidth="173.0" text="Label" />
-                        <Label prefHeight="23.0" prefWidth="173.0" text="Label" />
-                        <Label prefHeight="25.0" prefWidth="173.0" text="Label" />
-                        <Label prefHeight="31.0" prefWidth="173.0" text="Label" />
-                        <Label prefHeight="35.0" prefWidth="173.0" text="Label" />
-                     </children>
-                  </VBox>
-               </children>
-            </FlowPane>
-         </children>
-      </AnchorPane>
-   </children>
+<StackPane xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.gestaocarga.controller.GestorController">
+
+    <children>
+
+        <!-- Área principal -->
+        <AnchorPane prefWidth="600" prefHeight="400">
+            <children>
+
+                <!-- Barra superior -->
+                <AnchorPane prefHeight="52" prefWidth="600">
+                    <children>
+                        <Button text="Sair" onAction="#voltarMenu" layoutX="534" layoutY="14"/>
+                        <Button text="Visualizar Histórico" layoutX="411" layoutY="14"/>
+                        <Button text="Adicionar Carga" layoutX="285" layoutY="14"
+                                prefWidth="117" prefHeight="25"
+                                onAction="#abrirTelinha"/>
+                    </children>
+                </AnchorPane>
+
+                <!-- Contêiner onde os cards serão adicionados -->
+                <FlowPane fx:id="containerCards"
+                          layoutX="21" layoutY="58"
+                          prefWidth="558" prefHeight="321"
+                          hgap="10" vgap="10"/>
+
+            </children>
+        </AnchorPane>
+
+        <!-- TELINHA POPUP -->
+        <AnchorPane fx:id="adicionarTelinha"
+                    visible="false"
+                    style="-fx-background-color: rgba(0,0,0,0.4);">
+
+            <children>
+                <VBox alignment="CENTER" spacing="10"
+                      style="-fx-background-color: white; -fx-background-radius: 10;"
+                      prefWidth="350" prefHeight="260"
+                      AnchorPane.leftAnchor="125" AnchorPane.topAnchor="70">
+
+                    <Label text="Adicionar Carga" style="-fx-font-size: 20;"/>
+
+                    <TextField fx:id="txtOrigem" promptText="Origem"/>
+                    <TextField fx:id="txtDestino" promptText="Destino"/>
+
+                    <DatePicker fx:id="txtDataEntrega" promptText="Data de entrega"/>
+
+                    <HBox alignment="CENTER" spacing="15">
+                        <Button text="Salvar" onAction="#salvarCarga"/>
+                        <Button text="Cancelar" onAction="#fecharTelinha"/>
+                    </HBox>
+
+                </VBox>
+            </children>
+        </AnchorPane>
+
+    </children>
+
 </StackPane>
