@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        scene.getStylesheets().add(getClass().getResource("/login.css").toExternalForm());
 
         stage.setTitle("Gestão de Carga");
         stage.setScene(scene);

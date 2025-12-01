@@ -12,20 +12,12 @@
 
     <children>
         <VBox spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10">
-
-            <!-- ORIGEM -->
             <Label text="Origem:" style="-fx-font-weight: bold;" />
             <Label fx:id="lblOrigem" style="-fx-font-size: 14;" />
-
-            <!-- DESTINO -->
             <Label text="Destino:" style="-fx-font-weight: bold;" />
             <Label fx:id="lblDestino" style="-fx-font-size: 14;" />
-
-            <!-- DATA ENTREGA -->
             <Label text="Data de Entrega:" style="-fx-font-weight: bold;" />
             <Label fx:id="lblData" style="-fx-font-size: 14;" />
-
-            <!-- BOTÃO ACEITAR -->
             <Button fx:id="btnAceitar"
                     text="Aceitar"
                     onAction="#aceitarCarga"

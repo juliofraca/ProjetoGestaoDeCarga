@@ -4,15 +4,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.CamionheiroController">
+<AnchorPane prefHeight="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.CamionheiroController">
 
     <children>
 
         <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Cargas Disponíveis" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20" />
+      <Button layoutX="414.0" layoutY="25.0" mnemonicParsing="false" onAction="#voltaTelaInical" text="Voltar" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
 
         <ScrollPane fitToWidth="true" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="70">
 
-            <FlowPane fx:id="flowPaneCargas" hgap="20" prefWidth="760" style="-fx-background-color: transparent;" vgap="20">
+            <FlowPane fx:id="flowPaneCargas" hgap="20" style="-fx-background-color: transparent;" vgap="20">
 
                 <padding>
                     <Insets bottom="20" left="20" right="20" top="20" />
@@ -20,7 +21,6 @@
 
             </FlowPane>
         </ScrollPane>
-      <Button layoutX="707.0" layoutY="25.0" mnemonicParsing="false" onAction="#voltaTelaInical" text="Voltar" />
 
     </children>
 </AnchorPane>

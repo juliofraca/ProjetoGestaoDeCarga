@@ -55,12 +55,10 @@ public class CamionheiroController {
 
     public void voltaTelaInical(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/org/example/gestaocarga/login-view.fxml"));
-
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/login.css").toExternalForm());
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        stage.setScene(scene);
         stage.show();
-
-
-
     }
 }

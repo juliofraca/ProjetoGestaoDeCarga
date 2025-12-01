@@ -33,7 +33,7 @@ public class CadastroController {
     protected void voltarLogin(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/login-view.fxml"));
         Scene loginScene = new Scene(fxmlLoader.load());
-
+        loginScene.getStylesheets().add(getClass().getResource("/login.css").toExternalForm());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(loginScene);
         stage.setTitle("Tela de Login");

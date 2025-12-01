@@ -1,0 +1,63 @@
+.stack-pane {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 0;
+}
+
+.top-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 15;
+}
+
+.top-bar .button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12;
+}
+
+.top-bar .button:hover {
+    -fx-background-color: #005fcc;
+}
+
+#containerCards {
+    -fx-padding: 10;
+}
+
+#adicionarTelinha {
+    -fx-background-color: rgba(0, 0, 0, 0.45);
+}
+
+.vbox {
+    -fx-padding: 20;
+}
+
+.vbox .label {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.vbox .text-field,
+.vbox .date-picker {
+    -fx-pref-width: 240;
+}
+
+
+.vbox .button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+.vbox .button:hover {
+    -fx-background-color: #1e7e34;
+}
+
+.hbox .button:last-child {
+    -fx-background-color: #dc3545;
+}
+
+.hbox .button:last-child:hover {
+    -fx-background-color: #bb2d3b;
+}

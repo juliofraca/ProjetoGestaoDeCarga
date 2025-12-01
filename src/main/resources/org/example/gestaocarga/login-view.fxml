@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.LoginController">
-   <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <HBox layoutX="309.0" layoutY="118.0" prefHeight="27.0" prefWidth="223.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="44.0" text="Usuario" />
-                  <TextField fx:id="usuarioDigitado" prefHeight="25.0" prefWidth="173.0" />
-               </children>
-            </HBox>
-            <HBox layoutX="309.0" layoutY="168.0" prefHeight="27.0" prefWidth="223.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="44.0" text="Senha" />
-                  <TextField fx:id="senhaDigitada" prefHeight="25.0" prefWidth="173.0" />
-               </children>
-            </HBox>
-            <Button layoutX="381.0" layoutY="221.0" mnemonicParsing="false" onAction="#bntEntrar" prefHeight="25.0" prefWidth="116.0" text="Entrar" />
-            <Button layoutX="381.0" layoutY="262.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="25.0" prefWidth="116.0" text="Realizar Cadastro" />
-            <StackPane>
-               <children>
-                  <AnchorPane prefHeight="407.0" prefWidth="296.0" />
-               </children>
-            </StackPane>
-         </children>
-      </AnchorPane>
-   </children>
+<StackPane styleClass="background" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.LoginController">
+
+    <children>
+
+        <VBox alignment="TOP_CENTER" spacing="24" StackPane.alignment="TOP_CENTER">
+            <padding>
+                <Insets top="40" />
+            </padding>
+            <children>
+                <Label fx:id="tituloLogin" styleClass="page-title" text="ViaCarga">
+               <font>
+                  <Font name="Georgia" size="24.0" />
+               </font></Label>
+            </children>
+        </VBox>
+
+        <VBox alignment="CENTER" maxHeight="460" maxWidth="380" prefHeight="420" prefWidth="360" spacing="12" styleClass="card" StackPane.alignment="CENTER">
+
+            <Region prefHeight="6" />
+
+
+            <VBox alignment="CENTER_LEFT" maxWidth="300" spacing="8">
+                <Label styleClass="label" text="Usuário">
+               <font>
+                  <Font name="MT Extra" size="12.0" />
+               </font></Label>
+                <TextField fx:id="usuarioDigitado" prefWidth="300" styleClass="input" />
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" maxWidth="300" spacing="8">
+                <Label styleClass="label" text="Senha" />
+                <PasswordField fx:id="senhaDigitada" prefWidth="300" styleClass="input" />
+            </VBox>
+
+
+            <VBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="10" />
+                </padding>
+                <Button fx:id="bntEntrar" onAction="#bntEntrar" prefWidth="300" styleClass="btn-primary" text="ENTRAR" />
+                <Button fx:id="cadastrarUsuario" onAction="#cadastrarUsuario" prefWidth="300" styleClass="btn-secondary" text="REALIZAR CADASTRO" />
+            </VBox>
+
+            <Region prefHeight="6" />
+        </VBox>
+
+    </children>
 </StackPane>

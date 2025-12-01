@@ -35,7 +35,7 @@ public class ConexaoBanco {
 
         try (Statement stmt = conexao.createStatement()) {
             stmt.execute(sql);
-            System.out.println("Tabela 'cargas' criada/verificada com sucesso.");
+            System.out.println("Tabela 'cargas' verificada com sucesso.");
         } catch (SQLException e) {
             System.out.println("Erro ao criar tabela cargas: " + e.getMessage());
         }

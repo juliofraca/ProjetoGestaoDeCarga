@@ -1,0 +1,63 @@
+
+.background {
+    -fx-background-color: linear-gradient(to bottom right, #0D1B3D, #1E8FBF);
+}
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-letter-spacing: 1.2px;
+}
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-padding: 16;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 20, 0, 0, 4);
+}
+
+.label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #131313;
+}
+.input {
+    -fx-font-size: 14px;
+    -fx-padding: 8 10 8 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #E6EDF3;
+    -fx-background-color: white;
+    -fx-effect: innershadow(two-pass-box, rgba(0,0,0,0.03), 1, 0.0, 0, 1);
+}
+
+.btn-primary {
+    -fx-background-color: linear-gradient(#2B6FE6, #1F4ED8);
+    -fx-background-radius: 20;
+    -fx-padding: 10 0;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 6, 0, 0, 2);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(#244fc9, #183fa8);
+}
+
+
+.btn-secondary {
+    -fx-background-color: linear-gradient(#4C8FF5, #2F6FED);
+    -fx-background-radius: 20;
+    -fx-padding: 10 0;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: linear-gradient(#3b7ce0, #1e5fd0);
+}
+#tituloLogin {
+    -fx-font-size: 35px;
+}

@@ -26,6 +26,7 @@ public class LoginController {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/cadastro-view.fxml"));
         Scene cadastroScene = new Scene(fxmlLoader.load());
+        cadastroScene.getStylesheets().add(getClass().getResource("/cadastrar.css").toExternalForm());
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(cadastroScene);
@@ -52,9 +53,9 @@ public class LoginController {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/gestaocarga/gestor-view.fxml"));
             Scene novaCena = new Scene(loader.load());
-
+            novaCena.getStylesheets().add(getClass().getResource("/gestor.css").toExternalForm());
             GestorController controller = loader.getController();
-            controller.setUsuario(usuario); // <-- AQUI É O QUE FALTAVA
+            controller.setUsuario(usuario);
 
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(novaCena);

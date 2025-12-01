@@ -3,22 +3,50 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.CadastroController">
-   <children>
-      <Label layoutX="269.0" layoutY="37.0" text="Cadastre-se" />
-      <VBox layoutX="233.0" layoutY="73.0" prefHeight="42.0" prefWidth="140.0">
-         <children>
-            <Label prefHeight="17.0" prefWidth="44.0" text="Usuario" />
-            <TextField fx:id="usuarioCadastrado" prefHeight="25.0" prefWidth="127.0" />
-         </children>
-      </VBox>
-      <VBox layoutX="232.0" layoutY="127.0" prefHeight="42.0" prefWidth="140.0">
-         <children>
-            <Label text="Digite sua senha " />
-            <TextField fx:id="senhaDigitada" />
-         </children></VBox>
-      <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="25.0" prefWidth="106.0" text="Cadastrar" />
-      <ComboBox fx:id="cbxTipo" layoutX="233.0" layoutY="188.0" prefHeight="25.0" prefWidth="140.0" promptText="Tipo de Usuario" />
-      <Button layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarLogin" text="Voltar" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestaocarga.controller.CadastroController">
+
+    <children>
+        <Button fx:id="btnVoltar" layoutX="926.0" layoutY="14.0" onAction="#voltarLogin" text="Voltar" />
+
+
+        <StackPane fx:id="centerArea" layoutX="-6.0" layoutY="37.0" prefHeight="563.0" prefWidth="1006.0">
+            <children>
+
+                <VBox fx:id="card" alignment="TOP_CENTER" maxHeight="280" maxWidth="420" prefHeight="280" spacing="14">
+                    <children>
+
+                        <Label text="Cadastre-se" />
+
+                        <VBox alignment="CENTER_LEFT" prefWidth="380" spacing="6">
+                            <children>
+                                <Label text="Usuário" />
+                                <TextField fx:id="usuarioCadastrado" />
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER_LEFT" prefWidth="380" spacing="6">
+                            <children>
+                                <Label text="Digite sua senha" />
+                                <TextField fx:id="senhaDigitada" />
+                            </children>
+                        </VBox>
+
+                        <ComboBox fx:id="cbxTipo" prefWidth="380" promptText="Tipo de Usuário" />
+
+                        <Button fx:id="btnCadastrar" onAction="#cadastrarUsuario" prefWidth="320" text="Cadastrar" />
+
+                    </children>
+                </VBox>
+
+            </children>
+
+            <AnchorPane.topAnchor>37.0</AnchorPane.topAnchor>
+            <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            <AnchorPane.leftAnchor>-6.0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+
+        </StackPane>
+
+    </children>
+
 </AnchorPane>
